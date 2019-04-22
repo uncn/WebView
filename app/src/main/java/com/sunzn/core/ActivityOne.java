@@ -33,5 +33,5 @@ public class ActivityOne extends AppCompatActivity {
             }
         });
     }
-    
+
 }
