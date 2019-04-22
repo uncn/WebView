@@ -21,4 +21,5 @@ public class ActivityTwo extends AppCompatActivity {
         });
         web.loadUrl("https://github.com/");
     }
+
 }
