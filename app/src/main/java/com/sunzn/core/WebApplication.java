@@ -8,6 +8,8 @@ import android.webkit.WebView;
 
 public class WebApplication extends Application {
 
+    private static final String PROCESS = "com.sunzn.core";
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -17,7 +19,7 @@ public class WebApplication extends Application {
     private void initPieWebView() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             String processName = getProcessName(this);
-            if (!"com.sunzn.core".equals(processName)) {
+            if (!PROCESS.equals(processName)) {
                 WebView.setDataDirectorySuffix(getString(processName, "sunzn"));
             }
         }
